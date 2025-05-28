@@ -19,7 +19,7 @@ public class Product{
     private int price;
 
     @ManyToOne
-    @JoinColumn(name="customerid", nullable = true)
+    @JoinColumn(name="customerid")
     private Customer customer;
 
     public Product(){}
