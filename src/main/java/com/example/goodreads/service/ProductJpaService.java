@@ -68,6 +68,8 @@ public class ProductJpaService implements ProductRepository{
                 int id = customer.getCustomerId();
                 Customer newCustomer = cj.findById(id).get();
                 oldOne.setCustomer(newCustomer);
+            }else{
+                oldOne.setCustomer(null);
             }
             sj.save(oldOne);
             return oldOne;
